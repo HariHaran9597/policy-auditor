@@ -1,0 +1,22 @@
+# Python
+__pycache__/
+*.pyc
+.venv/
+*.egg-info/
+.pytest_cache/
+
+# Env & secrets
+.env
+
+# Milvus docker volumes
+volumes/
+
+# Data & artifacts
+data/raw/
+*.milvus
+reports/*.json.tmp
+
+# OS
+Thumbs.db
+.DS_Store
+*.db

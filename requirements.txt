@@ -1,0 +1,24 @@
+# Core pipeline
+pymupdf>=1.24
+pymilvus>=2.5.3
+sentence-transformers>=3.0
+pydantic>=2.7
+pydantic-settings>=2.3
+
+# LLM
+groq>=0.11
+
+# UI
+streamlit>=1.36
+pandas>=2.0
+
+# Evaluation
+# NOTE: ragas 0.2.x needs the langchain 0.3 era (ragas 0.4.x currently conflicts
+# with langchain-community >= 0.4 which removed chat_models.vertexai)
+ragas==0.2.15
+langchain-groq>=0.3,<0.4
+langchain-core>=0.3,<0.4
+langchain-community>=0.3,<0.4
+
+# Sample data generation
+reportlab>=4.0

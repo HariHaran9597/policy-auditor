@@ -1,0 +1,332 @@
+[
+  {
+    "question": "How many working days of annual leave do employees get, and how many days can be carried over into the next year?",
+    "answer": "- Employees are entitled to 24 working days of annual leave per year [Acme_Employee_Handbook_2026.pdf, Page 4, Lines 1-11].\n- Up to 8 days of unused annual leave may be carried over into the next leave year [Acme_Employee_Handbook_2026.pdf, Page 4, Lines 3-19].",
+    "contexts": [
+      "it is taken, except in emergencies covered by sick leave rules below.\nThe following leave types and annual entitlements apply to all confirmed employees:\nLeave entitlements are pro-rated in the joining year and in the year of exit.\nCarry-over: up to 8 days of unused annual leave may be carried into the next leave year; carried-over\nleave expires on 31 March of that year. Sick leave and casual leave cannot be carried over under any\ncircumstances.\nAnnual leave of 3 or more consecutive working days requires 14 calendar days of advance notice and\nmanager approval recorded in the HR portal. Leave taken without approval is treated as loss of pay.\nSick leave of more than 3 consecutive working days must be supported by a registered medical\npractitioner's certificate submitted within 5 working days of rejoining.",
+      "4. Leave Policy\nThe leave year runs from 1 January to 31 December. All leave must be applied for in the HR portal before\nit is taken, except in emergencies covered by sick leave rules below.\nThe following leave types and annual entitlements apply to all confirmed employees:\nLeave type | Entitlement per year | Advance notice | Carry-over\nAnnual / earned leave | 24 working days | 14 calendar days for 3+ day blocks | Up to 8 days, expires 31 March\nSick leave | 12 working days | Inform manager same day; certificate if 3+ days | Not allowed\nCasual leave | 6 working days | 2 working days | Not allowed\nMaternity leave | 26 weeks | As per Maternity Benefit Act; max 8 weeks prenatal | Not applicable\nPaternity leave | 4 weeks | 7 calendar days | Not applicable; within 6 months of birth\nBereavement leave | 5 working days | Retroactive application within 7 working days | Not applicable",
+      "11. Separation and Exit\nResignation must be submitted through the HR portal. The notice period is 30 calendar days for Grades L1\nand L2, and 60 calendar days for Grades L3 and above. Notice pay in lieu is permitted only with mutual\nwritten agreement.\nDuring the notice period the employee is expected to complete a structured handover documented in the\nhandover template; the relieving letter is issued only after the reporting manager signs off the handover.\nFull and final settlement, including reimbursements and leave encashment (annual leave only, capped at\n45 days), is processed within 45 calendar days of the last working day.\nAll company assets (laptop, access cards, and peripherals) must be returned on or before the last working\nday; unreturned assets are recovered at book value from the settlement amount."
+    ],
+    "reference": "Employees get 24 working days of annual leave per year. Up to 8 unused days may be carried into the next leave year, and carried-over leave expires on 31 March.",
+    "citations": [
+      "Acme_Employee_Handbook_2026.pdf, Page 4, Lines 3-19",
+      "Acme_Employee_Handbook_2026.pdf, Page 4, Lines 1-11"
+    ],
+    "timings_ms": {
+      "expansion_ms": 580.4,
+      "retrieval_ms": 570.4,
+      "rerank_ms": 5340.3,
+      "generation_ms": 3754.7
+    },
+    "wall_s": 10.25
+  },
+  {
+    "question": "How long is paternity leave and within how many months of the child's birth must it be used?",
+    "answer": "- Paternity leave is 4 weeks long [Acme_Employee_Handbook_2026.pdf, Page 4, Lines 18-26].\n- It must be availed within 6 months of the child's birth [Acme_Employee_Handbook_2026.pdf, Page 4, Lines 18-26].",
+    "contexts": [
+      "Sick leave of more than 3 consecutive working days must be supported by a registered medical\npractitioner's certificate submitted within 5 working days of rejoining.\nMaternity leave of 26 weeks applies as per the Maternity Benefit Act, of which not more than 8 weeks may\nprecede the expected delivery date. Paternity leave of 4 weeks must be availed within 6 months of the\nchild's birth, in blocks of no less than 1 week.\nBereavement leave of 5 working days applies to the loss of an immediate family member (spouse, child,\nparent, sibling, or grandparent) and must be applied retroactively within 7 working days.\nAcme Corp — Internal / Confidential\nPage 4",
+      "4. Leave Policy\nThe leave year runs from 1 January to 31 December. All leave must be applied for in the HR portal before\nit is taken, except in emergencies covered by sick leave rules below.\nThe following leave types and annual entitlements apply to all confirmed employees:\nLeave type | Entitlement per year | Advance notice | Carry-over\nAnnual / earned leave | 24 working days | 14 calendar days for 3+ day blocks | Up to 8 days, expires 31 March\nSick leave | 12 working days | Inform manager same day; certificate if 3+ days | Not allowed\nCasual leave | 6 working days | 2 working days | Not allowed\nMaternity leave | 26 weeks | As per Maternity Benefit Act; max 8 weeks prenatal | Not applicable\nPaternity leave | 4 weeks | 7 calendar days | Not applicable; within 6 months of birth\nBereavement leave | 5 working days | Retroactive application within 7 working days | Not applicable",
+      "it is taken, except in emergencies covered by sick leave rules below.\nThe following leave types and annual entitlements apply to all confirmed employees:\nLeave entitlements are pro-rated in the joining year and in the year of exit.\nCarry-over: up to 8 days of unused annual leave may be carried into the next leave year; carried-over\nleave expires on 31 March of that year. Sick leave and casual leave cannot be carried over under any\ncircumstances.\nAnnual leave of 3 or more consecutive working days requires 14 calendar days of advance notice and\nmanager approval recorded in the HR portal. Leave taken without approval is treated as loss of pay.\nSick leave of more than 3 consecutive working days must be supported by a registered medical\npractitioner's certificate submitted within 5 working days of rejoining."
+    ],
+    "reference": "Paternity leave is 4 weeks and must be availed within 6 months of the child's birth, in blocks of no less than 1 week.",
+    "citations": [
+      "Acme_Employee_Handbook_2026.pdf, Page 4, Lines 18-26",
+      "Acme_Employee_Handbook_2026.pdf, Page 4, Lines 3-19"
+    ],
+    "timings_ms": {
+      "expansion_ms": 326.0,
+      "retrieval_ms": 193.7,
+      "rerank_ms": 4035.0,
+      "generation_ms": 5668.9
+    },
+    "wall_s": 10.22
+  },
+  {
+    "question": "What is the per-night hotel ceiling for a Grade L3 employee travelling within India, and what flight class are they entitled to?",
+    "answer": "- The per-night hotel ceiling for a Grade L3 employee travelling within India is 12,000 INR [Acme_Employee_Handbook_2026.pdf, Page 8, Lines 1-14].\n- Grade L3 employees are entitled to Business class flights [Acme_Employee_Handbook_2026.pdf, Page 8, Lines 1-14].",
+    "contexts": [
+      "8. Expense and Travel Policy\nAll business expenses must be genuine, business-related, supported by original invoices, and submitted\nthrough the expense portal within 30 calendar days of the expense date. Late submissions beyond 60\ndays are reimbursed only with CFO approval.\nTravel class and hotel ceilings by grade are as follows (per night, within India):\nGrade | Flight class | Hotel ceiling (per night, India) | Local travel\nL1 | Economy | 4,000 INR | Cab, actuals\nL2 | Premium economy | 7,000 INR | Cab, actuals\nL3 | Business | 12,000 INR | Chauffeur for client meetings\nL4 (Director+) | Business | 18,000 INR | Chauffeur\nThe meal allowance on business travel within India is 600 INR per day (no receipts required). Incidental\nexpenses are covered at 100 INR per day.\nAny single expense above 25,000 INR requires pre-approval from the Chief Financial Officer in addition to\nthe normal manager approval.",
+      "2. Employment Classification and Probation\nEvery new regular employee is placed on probation for a period of six (6) months from the date of joining.\nProbation may be extended once, by up to three (3) additional months, with written reasons provided to\nthe employee.\nConfirmation of employment requires a probation review rating of Meets Expectations or higher,\ncompletion of all mandatory onboarding trainings, and return of all signed policy acknowledgements to HR.\nEmployment classifications used throughout this Handbook: Grade L1 (Associate), Grade L2 (Senior\nAssociate), Grade L3 (Manager and above), Grade L4 (Director and above). Where a rule differs by grade,\nthe grade recorded in the HR portal on the date the rule applies is authoritative.\nAcme Corp — Internal / Confidential\nPage 2",
+      "10. Benefits Summary\nAll regular employees are covered by group health insurance with a family floater sum insured of 500,000\nINR. Employees at Grade L3 and above receive a top-up cover of 200,000 INR. New joiners are enrolled\nautomatically on their start date.\nAn annual preventive health check-up is covered for employees aged 40 and above, and for all employees\nat Grade L3 and above, up to 6,000 INR per year.\nThe learning and development budget is 30,000 INR per year for Grades L2 and above, usable for\ncourses, certifications, and books with manager approval; it does not carry over.\nGroup term life insurance of 24 months of fixed pay and personal accident cover of 12 months of fixed pay\napply to all regular employees at no cost.\nStatutory benefits (provident fund, gratuity, and insurance under the ESI Act where applicable) are\nadministered per law and summarized on each payslip."
+    ],
+    "reference": "For Grade L3 the hotel ceiling is 12,000 INR per night within India, and the entitled flight class is Business.",
+    "citations": [
+      "Acme_Employee_Handbook_2026.pdf, Page 8, Lines 1-14"
+    ],
+    "timings_ms": {
+      "expansion_ms": 295.0,
+      "retrieval_ms": 214.3,
+      "rerank_ms": 3984.0,
+      "generation_ms": 30109.7
+    },
+    "wall_s": 34.6
+  },
+  {
+    "question": "What is the notice period when a Grade L3 employee resigns?",
+    "answer": "The notice period for a Grade L3 employee is 60 calendar days [Acme_Employee_Handbook_2026.pdf, Page 11, Lines 1-10].",
+    "contexts": [
+      "11. Separation and Exit\nResignation must be submitted through the HR portal. The notice period is 30 calendar days for Grades L1\nand L2, and 60 calendar days for Grades L3 and above. Notice pay in lieu is permitted only with mutual\nwritten agreement.\nDuring the notice period the employee is expected to complete a structured handover documented in the\nhandover template; the relieving letter is issued only after the reporting manager signs off the handover.\nFull and final settlement, including reimbursements and leave encashment (annual leave only, capped at\n45 days), is processed within 45 calendar days of the last working day.\nAll company assets (laptop, access cards, and peripherals) must be returned on or before the last working\nday; unreturned assets are recovered at book value from the settlement amount.",
+      "2. Employment Classification and Probation\nEvery new regular employee is placed on probation for a period of six (6) months from the date of joining.\nProbation may be extended once, by up to three (3) additional months, with written reasons provided to\nthe employee.\nConfirmation of employment requires a probation review rating of Meets Expectations or higher,\ncompletion of all mandatory onboarding trainings, and return of all signed policy acknowledgements to HR.\nEmployment classifications used throughout this Handbook: Grade L1 (Associate), Grade L2 (Senior\nAssociate), Grade L3 (Manager and above), Grade L4 (Director and above). Where a rule differs by grade,\nthe grade recorded in the HR portal on the date the rule applies is authoritative.\nAcme Corp — Internal / Confidential\nPage 2",
+      "10. Benefits Summary\nAll regular employees are covered by group health insurance with a family floater sum insured of 500,000\nINR. Employees at Grade L3 and above receive a top-up cover of 200,000 INR. New joiners are enrolled\nautomatically on their start date.\nAn annual preventive health check-up is covered for employees aged 40 and above, and for all employees\nat Grade L3 and above, up to 6,000 INR per year.\nThe learning and development budget is 30,000 INR per year for Grades L2 and above, usable for\ncourses, certifications, and books with manager approval; it does not carry over.\nGroup term life insurance of 24 months of fixed pay and personal accident cover of 12 months of fixed pay\napply to all regular employees at no cost.\nStatutory benefits (provident fund, gratuity, and insurance under the ESI Act where applicable) are\nadministered per law and summarized on each payslip."
+    ],
+    "reference": "The notice period is 60 calendar days for Grades L3 and above (30 calendar days for L1 and L2).",
+    "citations": [
+      "Acme_Employee_Handbook_2026.pdf, Page 11, Lines 1-10"
+    ],
+    "timings_ms": {
+      "expansion_ms": 307.9,
+      "retrieval_ms": 172.4,
+      "rerank_ms": 3690.5,
+      "generation_ms": 34182.7
+    },
+    "wall_s": 38.35
+  },
+  {
+    "question": "Within how many days must the Internal Committee complete a POSH inquiry, and how quickly are complaints acknowledged?",
+    "answer": "- The Internal Committee must complete a POSH inquiry within 90 days [Acme_Employee_Handbook_2026.pdf, Page 7, Lines 1-12].\n- Complaints are acknowledged within 2 working days [Acme_Employee_Handbook_2026.pdf, Page 7, Lines 6-18].",
+    "contexts": [
+      "7. Anti-Harassment and Grievance Redressal\nAcme Corp maintains a zero-tolerance position on workplace harassment, including sexual harassment,\nwhich is administered by the Internal Committee (IC) constituted under the POSH Act.\nComplaints may be raised with any of the following, in any order: the immediate manager, the HR\nBusiness Partner, any member of the Internal Committee, or the anonymous ethics hotline\n(ethics.acme.example). Complaints are acknowledged within 2 working days.\nThe grievance resolution timeline is as follows, with escalation automatic when a stage exceeds its limit:\nEscalation level | Authority | Response limit\nLevel 1 | Immediate manager | 3 business days\nLevel 2 | HR Business Partner | 5 business days\nLevel 3 | Chief People Officer | 10 business days\nPOSH complaints | Internal Committee | Acknowledgement 2 days; inquiry within 90 days",
+      "(ethics.acme.example). Complaints are acknowledged within 2 working days.\nThe grievance resolution timeline is as follows, with escalation automatic when a stage exceeds its limit:\nPOS complaints are inquiry-completed within 90 days as required by law, and the IC's recommendations\nare implemented within 60 days of the report.\nRetaliation against any complainant or witness is itself gross misconduct and is investigated by the Chief\nPeople Officer directly.\nAcme Corp — Internal / Confidential\nPage 7",
+      "All company assets (laptop, access cards, and peripherals) must be returned on or before the last working\nday; unreturned assets are recovered at book value from the settlement amount.\nTermination for cause follows the disciplinary matrix in Section 12 and, where applicable, the procedures\nof the Internal Committee under the POSH Act.\nAcme Corp — Internal / Confidential\nPage 11"
+    ],
+    "reference": "Complaints are acknowledged within 2 working days. POSH complaints must have the inquiry completed within 90 days as required by law, and the IC's recommendations are implemented within 60 days of the report.",
+    "citations": [
+      "Acme_Employee_Handbook_2026.pdf, Page 7, Lines 1-12",
+      "Acme_Employee_Handbook_2026.pdf, Page 7, Lines 6-18"
+    ],
+    "timings_ms": {
+      "expansion_ms": 232.9,
+      "retrieval_ms": 209.0,
+      "rerank_ms": 3902.4,
+      "generation_ms": 4540.0
+    },
+    "wall_s": 8.88
+  },
+  {
+    "question": "What is the minimum password length and the password rotation period?",
+    "answer": "- The minimum password length is 12 characters minimum [Acme_IT_Security_Policy_2026.pdf, Page 2, Lines 1-13].\n- The password rotation period is every 180 days [Acme_IT_Security_Policy_2026.pdf, Page 2, Lines 1-13].",
+    "contexts": [
+      "2. Password and Authentication Policy\nAll corporate and cloud application accounts must satisfy the following minimum requirements:\nRequirement | Minimum standard\nPassword length | 12 characters minimum\nComplexity | At least one uppercase, one lowercase, one digit, one special character\nRotation | Every 180 days; immediate change on suspicion of compromise\nHistory | Last 10 passwords cannot be reused\nAccount lockout | After 5 failed attempts, locked for 15 minutes\nPassword manager | Mandatory for all corporate credentials; provided by IT\nMulti-factor authentication (MFA) is mandatory for all cloud applications, remote VPN access, and\nadministrator accounts, using the approved authenticator app; SMS-based MFA is not permitted for\nRestricted systems.\nCredentials must never be shared, embedded in code, or stored outside the corporate password manager.",
+      "6. Access Control\nAccess follows least privilege and role-based access control. Access requests are raised in the identity\nportal, approved by the system owner, and granted within 2 business days for standard roles.\nAccess rights are reviewed quarterly by system owners; unused accounts are disabled after 45 days of\ninactivity and deleted after 90 days.\nLeavers lose all access on their last working day (same-day revocation by IT upon HR trigger). Privileged\n(administrator) access requires a named individual, a justification, and automatic expiry after 90 days.\nAcme Corp — Internal / Confidential\nPage 6",
+      "Restricted systems.\nCredentials must never be shared, embedded in code, or stored outside the corporate password manager.\nAny suspected credential exposure must be reported within 24 hours and triggers a forced reset.\nAcme Corp — Internal / Confidential\nPage 2"
+    ],
+    "reference": "The minimum password length is 12 characters, and passwords must be rotated every 180 days (immediately on suspicion of compromise).",
+    "citations": [
+      "Acme_IT_Security_Policy_2026.pdf, Page 2, Lines 1-13",
+      "Acme_IT_Security_Policy_2026.pdf, Page 2, Lines 12-16"
+    ],
+    "timings_ms": {
+      "expansion_ms": 242.0,
+      "retrieval_ms": 198.4,
+      "rerank_ms": 3536.9,
+      "generation_ms": 5424.6
+    },
+    "wall_s": 9.4
+  },
+  {
+    "question": "After how many failed login attempts is an account locked, and for how long?",
+    "answer": "An account is locked after 5 failed attempts and remains locked for 15 minutes [Acme_IT_Security_Policy_2026.pdf, Page 2, Lines 1-13].",
+    "contexts": [
+      "2. Password and Authentication Policy\nAll corporate and cloud application accounts must satisfy the following minimum requirements:\nRequirement | Minimum standard\nPassword length | 12 characters minimum\nComplexity | At least one uppercase, one lowercase, one digit, one special character\nRotation | Every 180 days; immediate change on suspicion of compromise\nHistory | Last 10 passwords cannot be reused\nAccount lockout | After 5 failed attempts, locked for 15 minutes\nPassword manager | Mandatory for all corporate credentials; provided by IT\nMulti-factor authentication (MFA) is mandatory for all cloud applications, remote VPN access, and\nadministrator accounts, using the approved authenticator app; SMS-based MFA is not permitted for\nRestricted systems.\nCredentials must never be shared, embedded in code, or stored outside the corporate password manager.",
+      "6. Access Control\nAccess follows least privilege and role-based access control. Access requests are raised in the identity\nportal, approved by the system owner, and granted within 2 business days for standard roles.\nAccess rights are reviewed quarterly by system owners; unused accounts are disabled after 45 days of\ninactivity and deleted after 90 days.\nLeavers lose all access on their last working day (same-day revocation by IT upon HR trigger). Privileged\n(administrator) access requires a named individual, a justification, and automatic expiry after 90 days.\nAcme Corp — Internal / Confidential\nPage 6",
+      "Restricted systems.\nCredentials must never be shared, embedded in code, or stored outside the corporate password manager.\nAny suspected credential exposure must be reported within 24 hours and triggers a forced reset.\nAcme Corp — Internal / Confidential\nPage 2"
+    ],
+    "reference": "The account locks after 5 failed attempts, for 15 minutes.",
+    "citations": [
+      "Acme_IT_Security_Policy_2026.pdf, Page 2, Lines 1-13",
+      "Acme_IT_Security_Policy_2026.pdf, Page 2, Lines 12-16"
+    ],
+    "timings_ms": {
+      "expansion_ms": 269.3,
+      "retrieval_ms": 193.7,
+      "rerank_ms": 3454.2,
+      "generation_ms": 11410.9
+    },
+    "wall_s": 15.33
+  },
+  {
+    "question": "What are the acknowledgement and resolution targets for a Sev2 security incident?",
+    "answer": "- The acknowledgement target for a Sev2 security incident is 30 minutes [Acme_IT_Security_Policy_2026.pdf, Page 5, Lines 1-11].\n- The resolution target for a Sev2 security incident is 8 hours [Acme_IT_Security_Policy_2026.pdf, Page 5, Lines 1-11].",
+    "contexts": [
+      "5. Incident Response and SLAs\nSecurity incidents must be reported to security@acme.example immediately upon suspicion. The on-call\nsecurity engineer triages every report against the following severity matrix and response targets:\nSeverity | Definition | Acknowledge within | Resolve within\nSev1 | Critical: production down or confirmed data breach | 15 minutes | 4 hours\nSev2 | High: major function degraded, limited breach risk | 30 minutes | 8 hours\nSev3 | Medium: single-system issue, workaround exists | 4 hours | 3 business days\nSev4 | Low: query or cosmetic defect | 1 business day | 10 business days\nA suspected breach of personal data must additionally be notified to the Data Protection Officer within 24\nhours for statutory assessment, and to affected customers per contractual terms.\nEvery Sev1 and Sev2 incident requires a blameless post-incident review within 5 business days, with",
+      "hours for statutory assessment, and to affected customers per contractual terms.\nEvery Sev1 and Sev2 incident requires a blameless post-incident review within 5 business days, with\ntracked corrective actions owned by the responsible engineering lead.\nAcme Corp — Internal / Confidential\nPage 5",
+      "7. Anti-Harassment and Grievance Redressal\nAcme Corp maintains a zero-tolerance position on workplace harassment, including sexual harassment,\nwhich is administered by the Internal Committee (IC) constituted under the POSH Act.\nComplaints may be raised with any of the following, in any order: the immediate manager, the HR\nBusiness Partner, any member of the Internal Committee, or the anonymous ethics hotline\n(ethics.acme.example). Complaints are acknowledged within 2 working days.\nThe grievance resolution timeline is as follows, with escalation automatic when a stage exceeds its limit:\nEscalation level | Authority | Response limit\nLevel 1 | Immediate manager | 3 business days\nLevel 2 | HR Business Partner | 5 business days\nLevel 3 | Chief People Officer | 10 business days\nPOSH complaints | Internal Committee | Acknowledgement 2 days; inquiry within 90 days"
+    ],
+    "reference": "A Sev2 incident must be acknowledged within 30 minutes and resolved within 8 hours.",
+    "citations": [
+      "Acme_IT_Security_Policy_2026.pdf, Page 5, Lines 1-11",
+      "Acme_IT_Security_Policy_2026.pdf, Page 5, Lines 10-14"
+    ],
+    "timings_ms": {
+      "expansion_ms": 172.6,
+      "retrieval_ms": 148.9,
+      "rerank_ms": 3559.4,
+      "generation_ms": 10978.5
+    },
+    "wall_s": 14.86
+  },
+  {
+    "question": "How quickly must a suspected personal-data breach be reported and to whom?",
+    "answer": "- Security incidents must be reported to security@acme.example immediately upon suspicion. [Acme_IT_Security_Policy_2026.pdf, Page 5, Lines 1-2]\n- A suspected breach of personal data must additionally be notified to the Data Protection Officer within 24 hours for statutory assessment, and to affected customers per contractual terms. [Acme_IT_Security_Policy_2026.pdf, Page 5, Lines 10-11]\n- Suspected data breaches involving HR records must be reported to security@acme.example within 24 hours. [Acme_Employee_Handbook_2026.pdf, Page 13, Lines 8-9]",
+    "contexts": [
+      "5. Incident Response and SLAs\nSecurity incidents must be reported to security@acme.example immediately upon suspicion. The on-call\nsecurity engineer triages every report against the following severity matrix and response targets:\nSeverity | Definition | Acknowledge within | Resolve within\nSev1 | Critical: production down or confirmed data breach | 15 minutes | 4 hours\nSev2 | High: major function degraded, limited breach risk | 30 minutes | 8 hours\nSev3 | Medium: single-system issue, workaround exists | 4 hours | 3 business days\nSev4 | Low: query or cosmetic defect | 1 business day | 10 business days\nA suspected breach of personal data must additionally be notified to the Data Protection Officer within 24\nhours for statutory assessment, and to affected customers per contractual terms.\nEvery Sev1 and Sev2 incident requires a blameless post-incident review within 5 business days, with",
+      "Restricted systems.\nCredentials must never be shared, embedded in code, or stored outside the corporate password manager.\nAny suspected credential exposure must be reported within 24 hours and triggers a forced reset.\nAcme Corp — Internal / Confidential\nPage 2",
+      "13. Data Handling Cross-Reference\nAll employee and customer personal data referenced in this Handbook is classified and handled according\nto the Acme Corp IT Security Policy 2026, including the data classification scheme (Public, Internal,\nConfidential, Restricted) defined there.\nHR records are Confidential; identity documents, salary information, and health records are Restricted and\nmay be accessed only by named HR roles listed in the HR data register.\nSuspected data breaches involving HR records must be reported to security@acme.example within 24\nhours under the incident response procedure of the IT Security Policy.\nAcme Corp — Internal / Confidential\nPage 13"
+    ],
+    "reference": "Suspected breaches must be reported to security@acme.example immediately upon suspicion and to the Data Protection Officer within 24 hours for statutory assessment; affected customers are notified per contractual terms.",
+    "citations": [
+      "Acme_IT_Security_Policy_2026.pdf, Page 5, Lines 1-11",
+      "Acme_Employee_Handbook_2026.pdf, Page 13, Lines 1-10"
+    ],
+    "timings_ms": {
+      "expansion_ms": 284.4,
+      "retrieval_ms": 214.6,
+      "rerank_ms": 3575.9,
+      "generation_ms": 10207.0
+    },
+    "wall_s": 14.28
+  },
+  {
+    "question": "How many days per week must an employee living within 50 km of an office work from that office?",
+    "answer": "Employees whose registered work location is within 50 km of an Acme Corp office must work from that office at least two (2) days per calendar week [Acme_Employee_Handbook_2026.pdf, Page 5, Lines 1-3]. This office-attendance requirement remains unchanged under the 2026 addendum [Acme_Remote_Work_Addendum_A_2026.pdf, Page 1, Lines 11-12]. Any exception to this requirement must be approved in writing by the department Director [Acme_Employee_Handbook_2026.pdf, Page 5, Lines 1-3].",
+    "contexts": [
+      "5. Remote and Hybrid Work\nEmployees whose registered work location is within 50 km of an Acme Corp office must work from that\noffice at least two (2) days per calendar week, unless an exception is approved in writing by the\ndepartment Director.\nFully remote status (fewer than one office day per month) requires approval of the department Director and\nthe Chief People Officer, is reviewed every six (6) months, and may be revoked with 30 days notice.\nA remote work internet allowance is paid to approved fully-remote employees: 1,000 INR per month for\nGrades L1 to L3. See also Addendum A (2026) for the revised allowance effective 1 March 2026.\nEmployees working remotely from a location other than their registered address for more than 30\nconsecutive days must inform HR in writing, as tax and statutory obligations may change.",
+      "Acme Corp Remote Work Addendum A\nEffective 1 March 2026 — Amends Employee Handbook 2026, Section 5\nAddendum A: Remote Work Allowance Revision (2026)\nThis addendum amends Section 5 of the Employee Handbook 2026 (Remote and Hybrid Work) with effect\nfrom 1 March 2026.\nThe monthly remote work internet allowance for approved fully-remote employees is revised from 1,000\nINR to 1,200 INR for Grades L1 and L2. For Grade L3 the allowance remains 1,000 INR.\nThe allowance is payable with monthly payroll upon confirmation of fully-remote status in the HR portal\nand is subject to statutory deductions where applicable.\nAll other terms of Section 5 of the Handbook, including the office-attendance requirement of two days per\nweek for employees within 50 km of an office, remain unchanged.\nAcme Corp — Internal / Confidential\nPage 1",
+      "Employees working remotely from a location other than their registered address for more than 30\nconsecutive days must inform HR in writing, as tax and statutory obligations may change.\nAll remote employees must comply with the Acme Corp IT Security Policy, including mandatory disk\nencryption and VPN usage for all company systems.\nAcme Corp — Internal / Confidential\nPage 5"
+    ],
+    "reference": "At least two days per calendar week, unless an exception is approved in writing by the department Director.",
+    "citations": [
+      "Acme_Employee_Handbook_2026.pdf, Page 5, Lines 1-10",
+      "Acme_Remote_Work_Addendum_A_2026.pdf, Page 1, Lines 1-13"
+    ],
+    "timings_ms": {
+      "expansion_ms": 211.1,
+      "retrieval_ms": 206.1,
+      "rerank_ms": 4143.2,
+      "generation_ms": 26747.8
+    },
+    "wall_s": 31.31
+  },
+  {
+    "question": "As of March 2026, what is the monthly remote-work internet allowance for a Grade L1 fully-remote employee?",
+    "answer": "As of 1 March 2026, the monthly remote work internet allowance for a Grade L1 fully-remote employee is 1,200 INR [Acme_Remote_Work_Addendum_A_2026.pdf, Page 1, Lines 1-13].",
+    "contexts": [
+      "Acme Corp Remote Work Addendum A\nEffective 1 March 2026 — Amends Employee Handbook 2026, Section 5\nAddendum A: Remote Work Allowance Revision (2026)\nThis addendum amends Section 5 of the Employee Handbook 2026 (Remote and Hybrid Work) with effect\nfrom 1 March 2026.\nThe monthly remote work internet allowance for approved fully-remote employees is revised from 1,000\nINR to 1,200 INR for Grades L1 and L2. For Grade L3 the allowance remains 1,000 INR.\nThe allowance is payable with monthly payroll upon confirmation of fully-remote status in the HR portal\nand is subject to statutory deductions where applicable.\nAll other terms of Section 5 of the Handbook, including the office-attendance requirement of two days per\nweek for employees within 50 km of an office, remain unchanged.\nAcme Corp — Internal / Confidential\nPage 1",
+      "5. Remote and Hybrid Work\nEmployees whose registered work location is within 50 km of an Acme Corp office must work from that\noffice at least two (2) days per calendar week, unless an exception is approved in writing by the\ndepartment Director.\nFully remote status (fewer than one office day per month) requires approval of the department Director and\nthe Chief People Officer, is reviewed every six (6) months, and may be revoked with 30 days notice.\nA remote work internet allowance is paid to approved fully-remote employees: 1,000 INR per month for\nGrades L1 to L3. See also Addendum A (2026) for the revised allowance effective 1 March 2026.\nEmployees working remotely from a location other than their registered address for more than 30\nconsecutive days must inform HR in writing, as tax and statutory obligations may change.",
+      "3. Working Hours and Attendance\nThe standard work week is 45 hours, Monday to Friday. Core hours during which every office-based\nemployee must be reachable are 10:00 to 16:00 India Standard Time; flexible band hours are 07:00 to\n19:00.\nEmployees working more than 9 hours in a day are entitled to a 45-minute paid break in addition to the\nstandard 30-minute lunch break.\nLate attendance is recorded when an employee arrives after the end of their declared flexible band start\ntime plus a grace period of 15 minutes. More than three (3) recorded late arrivals in a calendar month\ntrigger a documented verbal warning from the reporting manager; six or more trigger a written warning.\nOvertime compensation applies only to Grade L1 employees, at 1.5x hourly basic pay, and must be\npre-approved in writing by the department head.\nAcme Corp — Internal / Confidential\nPage 3"
+    ],
+    "reference": "From 1 March 2026 the allowance is 1,200 INR per month for Grades L1 and L2 (Addendum A raised it from the 1,000 INR stated in the Handbook). Grade L3 remains at 1,000 INR.",
+    "citations": [
+      "Acme_Remote_Work_Addendum_A_2026.pdf, Page 1, Lines 1-13"
+    ],
+    "timings_ms": {
+      "expansion_ms": 354.4,
+      "retrieval_ms": 218.7,
+      "rerank_ms": 3939.5,
+      "generation_ms": 4743.8
+    },
+    "wall_s": 9.26
+  },
+  {
+    "question": "Can Restricted data be accessed from a personal device?",
+    "answer": "No, Restricted data cannot be accessed from a personal device. [Acme_IT_Security_Policy_2026.pdf, Page 3, Lines 1-10]\nThe policy explicitly states that Confidential and Restricted resources require a corporate device. [Acme_IT_Security_Policy_2026.pdf, Page 3, Lines 1-10]\nPersonal devices may only access Internal-classification resources, and only through the managed browser. [Acme_IT_Security_Policy_2026.pdf, Page 3, Lines 1-10]",
+    "contexts": [
+      "13. Data Handling Cross-Reference\nAll employee and customer personal data referenced in this Handbook is classified and handled according\nto the Acme Corp IT Security Policy 2026, including the data classification scheme (Public, Internal,\nConfidential, Restricted) defined there.\nHR records are Confidential; identity documents, salary information, and health records are Restricted and\nmay be accessed only by named HR roles listed in the HR data register.\nSuspected data breaches involving HR records must be reported to security@acme.example within 24\nhours under the incident response procedure of the IT Security Policy.\nAcme Corp — Internal / Confidential\nPage 13",
+      "3. Device Security\nFull-disk encryption (FileVault or BitLocker) is mandatory on all laptops and mobile devices used for Acme\nCorp work, including personal devices under the BYOD programme.\nDevices must auto-lock after 5 minutes of inactivity with a password or biometric unlock. Critical OS and\nbrowser patches must be applied within 72 hours of release; all other security patches within 14 days.\nLoss or theft of any device with access to corporate systems must be reported to security@acme.example\nand the IT helpdesk within 24 hours; the device is remotely wiped and all stored sessions revoked.\nPersonal devices may access Internal-classification resources only through the managed browser;\nConfidential and Restricted resources require a corporate device.\nAcme Corp — Internal / Confidential\nPage 3",
+      "4. Data Classification\nAll data must be classified at creation into one of four levels:\nLevel | Definition | Examples | Handling rule\nPublic | Approved for public release | Marketing material, job postings | No restriction\nInternal | Default for business data | This policy, org charts | Employees and approved contractors\nConfidential | Damage to Acme Corp if disclosed | Contracts, financials, HR records | Need-to-know; encrypted sharing\nRestricted | Severe legal/financial harm if disclosed | Customer PII, health records, credentials | Named-access only; secure-share portal\nPersonally identifiable information (PII) of employees and customers is Restricted by default. Restricted\ndata must be encrypted at rest and in transit, and shared only through the approved secure-share portal —\nnever as email attachments."
+    ],
+    "reference": "No. Personal devices may access Internal-classification resources only through the managed browser; Confidential and Restricted resources require a corporate device.",
+    "citations": [
+      "Acme_IT_Security_Policy_2026.pdf, Page 3, Lines 1-11"
+    ],
+    "timings_ms": {
+      "expansion_ms": 213.2,
+      "retrieval_ms": 180.6,
+      "rerank_ms": 3483.1,
+      "generation_ms": 27196.3
+    },
+    "wall_s": 31.07
+  },
+  {
+    "question": "How many hours per week of side employment cause the approval to be denied?",
+    "answer": "Approval for side employment is denied if the secondary occupation exceeds 20 hours per week [Acme_Employee_Handbook_2026.pdf, Page 6, Lines 7-15].",
+    "contexts": [
+      "Side employment (secondary occupation) requires prior written approval from the reporting manager and\nthe HRBP; approval is denied wherever the secondary occupation competes with Acme Corp or exceeds\n20 hours per week.\nPublic statements about Acme Corp, including on social media, must follow the Communications Policy;\nemployees must not disclose Confidential or Restricted information as defined in the IT Security Policy.\nViolations of the Code of Conduct are handled under the disciplinary matrix in Section 12; gross\nmisconduct may result in termination without notice.\nAcme Corp — Internal / Confidential\nPage 6",
+      "6. Code of Conduct\nEmployees must disclose any outside employment, directorship, or financial interest greater than 5\npercent in a vendor, customer, or competitor of Acme Corp within 10 working days of it arising, using the\nConflict of Interest form on the HR portal.\nGifts or hospitality from business partners with a value above 2,500 INR must be declined or declared to\nCompliance within 5 working days. Cash or cash-equivalent gifts are prohibited in all cases.\nSide employment (secondary occupation) requires prior written approval from the reporting manager and\nthe HRBP; approval is denied wherever the secondary occupation competes with Acme Corp or exceeds",
+      "3. Working Hours and Attendance\nThe standard work week is 45 hours, Monday to Friday. Core hours during which every office-based\nemployee must be reachable are 10:00 to 16:00 India Standard Time; flexible band hours are 07:00 to\n19:00.\nEmployees working more than 9 hours in a day are entitled to a 45-minute paid break in addition to the\nstandard 30-minute lunch break.\nLate attendance is recorded when an employee arrives after the end of their declared flexible band start\ntime plus a grace period of 15 minutes. More than three (3) recorded late arrivals in a calendar month\ntrigger a documented verbal warning from the reporting manager; six or more trigger a written warning.\nOvertime compensation applies only to Grade L1 employees, at 1.5x hourly basic pay, and must be\npre-approved in writing by the department head.\nAcme Corp — Internal / Confidential\nPage 3"
+    ],
+    "reference": "Approval for side employment is denied if the secondary occupation competes with Acme Corp or exceeds 20 hours per week.",
+    "citations": [
+      "Acme_Employee_Handbook_2026.pdf, Page 6, Lines 7-15",
+      "Acme_Employee_Handbook_2026.pdf, Page 6, Lines 1-8"
+    ],
+    "timings_ms": {
+      "expansion_ms": 331.0,
+      "retrieval_ms": 205.3,
+      "rerank_ms": 3612.9,
+      "generation_ms": 20525.4
+    },
+    "wall_s": 24.67
+  },
+  {
+    "question": "What performance rating is required to be eligible for promotion, and what else must be true?",
+    "answer": "- The required performance rating is \"Meets Expectations or higher in the most recent cycle\" [Acme_Employee_Handbook_2026.pdf, Page 9, Lines 7-8].\n- The employee must have \"completion of 12 months in the current grade\" [Acme_Employee_Handbook_2026.pdf, Page 9, Line 8].\n- A \"current-year promotion budget confirmation from Finance\" is required [Acme_Employee_Handbook_2026.pdf, Page 9, Lines 8-9].",
+    "contexts": [
+      "9. Performance Management\nThe performance year runs from 1 April to 31 March. Every employee has documented quarterly check-ins\nwith their manager in the performance portal, and a formal annual review in April.\nRatings are: Exceptional, Exceeds Expectations, Meets Expectations, Needs Improvement, and\nUnsatisfactory. A rating of Needs Improvement places the employee on a Performance Improvement Plan\n(PIP) of up to 60 days with fortnightly reviews.\nPromotions are effective in the April and October cycles. Eligibility requires a rating of Meets Expectations\nor higher in the most recent cycle, completion of 12 months in the current grade, and a current-year\npromotion budget confirmation from Finance.\nTwo consecutive Unsatisfactory ratings, or failure to exit a PIP successfully, may lead to separation under\nSection 11.\nAcme Corp — Internal / Confidential\nPage 9",
+      "2. Employment Classification and Probation\nEvery new regular employee is placed on probation for a period of six (6) months from the date of joining.\nProbation may be extended once, by up to three (3) additional months, with written reasons provided to\nthe employee.\nConfirmation of employment requires a probation review rating of Meets Expectations or higher,\ncompletion of all mandatory onboarding trainings, and return of all signed policy acknowledgements to HR.\nEmployment classifications used throughout this Handbook: Grade L1 (Associate), Grade L2 (Senior\nAssociate), Grade L3 (Manager and above), Grade L4 (Director and above). Where a rule differs by grade,\nthe grade recorded in the HR portal on the date the rule applies is authoritative.\nAcme Corp — Internal / Confidential\nPage 2",
+      "6. Code of Conduct\nEmployees must disclose any outside employment, directorship, or financial interest greater than 5\npercent in a vendor, customer, or competitor of Acme Corp within 10 working days of it arising, using the\nConflict of Interest form on the HR portal.\nGifts or hospitality from business partners with a value above 2,500 INR must be declined or declared to\nCompliance within 5 working days. Cash or cash-equivalent gifts are prohibited in all cases.\nSide employment (secondary occupation) requires prior written approval from the reporting manager and\nthe HRBP; approval is denied wherever the secondary occupation competes with Acme Corp or exceeds"
+    ],
+    "reference": "A rating of Meets Expectations or higher in the most recent cycle, completion of 12 months in the current grade, and a current-year promotion budget confirmation from Finance. Promotions are effective in the April and October cycles.",
+    "citations": [
+      "Acme_Employee_Handbook_2026.pdf, Page 9, Lines 1-13"
+    ],
+    "timings_ms": {
+      "expansion_ms": 248.1,
+      "retrieval_ms": 199.6,
+      "rerank_ms": 3810.1,
+      "generation_ms": 13103.4
+    },
+    "wall_s": 17.36
+  },
+  {
+    "question": "Can unused sick leave be carried into the next year?",
+    "answer": "No, unused sick leave cannot be carried into the next year. The policy explicitly states that sick leave cannot be carried over under any circumstances [Acme_Employee_Handbook_2026.pdf, Page 4, Lines 3-19]. The leave entitlement table also lists the carry-over status for sick leave as \"Not allowed\" [Acme_Employee_Handbook_2026.pdf, Page 4, Lines 1-11].",
+    "contexts": [
+      "it is taken, except in emergencies covered by sick leave rules below.\nThe following leave types and annual entitlements apply to all confirmed employees:\nLeave entitlements are pro-rated in the joining year and in the year of exit.\nCarry-over: up to 8 days of unused annual leave may be carried into the next leave year; carried-over\nleave expires on 31 March of that year. Sick leave and casual leave cannot be carried over under any\ncircumstances.\nAnnual leave of 3 or more consecutive working days requires 14 calendar days of advance notice and\nmanager approval recorded in the HR portal. Leave taken without approval is treated as loss of pay.\nSick leave of more than 3 consecutive working days must be supported by a registered medical\npractitioner's certificate submitted within 5 working days of rejoining.",
+      "6. Access Control\nAccess follows least privilege and role-based access control. Access requests are raised in the identity\nportal, approved by the system owner, and granted within 2 business days for standard roles.\nAccess rights are reviewed quarterly by system owners; unused accounts are disabled after 45 days of\ninactivity and deleted after 90 days.\nLeavers lose all access on their last working day (same-day revocation by IT upon HR trigger). Privileged\n(administrator) access requires a named individual, a justification, and automatic expiry after 90 days.\nAcme Corp — Internal / Confidential\nPage 6",
+      "4. Leave Policy\nThe leave year runs from 1 January to 31 December. All leave must be applied for in the HR portal before\nit is taken, except in emergencies covered by sick leave rules below.\nThe following leave types and annual entitlements apply to all confirmed employees:\nLeave type | Entitlement per year | Advance notice | Carry-over\nAnnual / earned leave | 24 working days | 14 calendar days for 3+ day blocks | Up to 8 days, expires 31 March\nSick leave | 12 working days | Inform manager same day; certificate if 3+ days | Not allowed\nCasual leave | 6 working days | 2 working days | Not allowed\nMaternity leave | 26 weeks | As per Maternity Benefit Act; max 8 weeks prenatal | Not applicable\nPaternity leave | 4 weeks | 7 calendar days | Not applicable; within 6 months of birth\nBereavement leave | 5 working days | Retroactive application within 7 working days | Not applicable"
+    ],
+    "reference": "No. Sick leave and casual leave cannot be carried over under any circumstances; only up to 8 days of annual leave can be carried over.",
+    "citations": [
+      "Acme_Employee_Handbook_2026.pdf, Page 4, Lines 3-19",
+      "Acme_Employee_Handbook_2026.pdf, Page 4, Lines 1-11"
+    ],
+    "timings_ms": {
+      "expansion_ms": 233.1,
+      "retrieval_ms": 195.9,
+      "rerank_ms": 4042.5,
+      "generation_ms": 32613.2
+    },
+    "wall_s": 37.08
+  },
+  {
+    "question": "What is the tuition reimbursement for an employee's child's college education?",
+    "answer": "The provided policy documents do not contain sufficient information to answer this question.\nRelated information present in the excerpts:\n- The learning and development budget is 30,000 INR per year for Grades L2 and above, usable for courses, certifications, and books with manager approval, and it does not carry over [Acme_Employee_Handbook_2026.pdf, Page 10, Lines 7-9].",
+    "contexts": [
+      "10. Benefits Summary\nAll regular employees are covered by group health insurance with a family floater sum insured of 500,000\nINR. Employees at Grade L3 and above receive a top-up cover of 200,000 INR. New joiners are enrolled\nautomatically on their start date.\nAn annual preventive health check-up is covered for employees aged 40 and above, and for all employees\nat Grade L3 and above, up to 6,000 INR per year.\nThe learning and development budget is 30,000 INR per year for Grades L2 and above, usable for\ncourses, certifications, and books with manager approval; it does not carry over.\nGroup term life insurance of 24 months of fixed pay and personal accident cover of 12 months of fixed pay\napply to all regular employees at no cost.\nStatutory benefits (provident fund, gratuity, and insurance under the ESI Act where applicable) are\nadministered per law and summarized on each payslip.",
+      "11. Separation and Exit\nResignation must be submitted through the HR portal. The notice period is 30 calendar days for Grades L1\nand L2, and 60 calendar days for Grades L3 and above. Notice pay in lieu is permitted only with mutual\nwritten agreement.\nDuring the notice period the employee is expected to complete a structured handover documented in the\nhandover template; the relieving letter is issued only after the reporting manager signs off the handover.\nFull and final settlement, including reimbursements and leave encashment (annual leave only, capped at\n45 days), is processed within 45 calendar days of the last working day.\nAll company assets (laptop, access cards, and peripherals) must be returned on or before the last working\nday; unreturned assets are recovered at book value from the settlement amount.",
+      "8. Expense and Travel Policy\nAll business expenses must be genuine, business-related, supported by original invoices, and submitted\nthrough the expense portal within 30 calendar days of the expense date. Late submissions beyond 60\ndays are reimbursed only with CFO approval.\nTravel class and hotel ceilings by grade are as follows (per night, within India):\nGrade | Flight class | Hotel ceiling (per night, India) | Local travel\nL1 | Economy | 4,000 INR | Cab, actuals\nL2 | Premium economy | 7,000 INR | Cab, actuals\nL3 | Business | 12,000 INR | Chauffeur for client meetings\nL4 (Director+) | Business | 18,000 INR | Chauffeur\nThe meal allowance on business travel within India is 600 INR per day (no receipts required). Incidental\nexpenses are covered at 100 INR per day.\nAny single expense above 25,000 INR requires pre-approval from the Chief Financial Officer in addition to\nthe normal manager approval."
+    ],
+    "reference": "The policy documents do not specify any tuition reimbursement for employees' children; the only learning benefit is the 30,000 INR per year learning and development budget for the employee themselves (Grades L2 and above).",
+    "citations": [
+      "Acme_Employee_Handbook_2026.pdf, Page 10, Lines 1-12"
+    ],
+    "timings_ms": {
+      "expansion_ms": 272.0,
+      "retrieval_ms": 194.1,
+      "rerank_ms": 3992.0,
+      "generation_ms": 12663.3
+    },
+    "wall_s": 17.12
+  }
+]
