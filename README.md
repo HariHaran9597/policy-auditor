@@ -12,6 +12,14 @@
   <img src="https://img.shields.io/badge/Python-3.11-3776AB?logo=python&logoColor=white" alt="Python">
 </p>
 
+<p align="center">
+  <a href="https://policy-auditorr.streamlit.app/">Live Demo</a>
+  &nbsp;|&nbsp;
+  <a href="#architecture">Architecture</a>
+  &nbsp;|&nbsp;
+  <a href="#evaluation-ragas">Evaluation</a>
+</p>
+
 ---
 
 ## Why this exists
