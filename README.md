@@ -6,7 +6,7 @@
 <p align="center">
   <img src="https://img.shields.io/badge/Retrieval-Hybrid_BM25%20%2B%20dense-4EA8DE?logo=milvus&logoColor=white" alt="Hybrid retrieval">
   <img src="https://img.shields.io/badge/Reranker-BGE_cross--encoder-FF6F3C" alt="Cross-encoder">
-  <img src="https://img.shields.io/badge/LLM-Groq_Qwen3.6_27B-000000?logo=groq" alt="Groq">
+  <img src="https://img.shields.io/badge/LLM-Groq_GPT--OSS--120B-000000?logo=groq" alt="Groq">
   <img src="https://img.shields.io/badge/UI-Streamlit-FF4B4B?logo=streamlit&logoColor=white" alt="Streamlit">
   <img src="https://img.shields.io/badge/Eval-RAGAS_0.2-8A2BE2" alt="RAGAS">
   <img src="https://img.shields.io/badge/Python-3.11-3776AB?logo=python&logoColor=white" alt="Python">
@@ -47,7 +47,7 @@ human can verify in seconds. This project is a small but complete answer to that
                 │ per-variant hybrid search (BM25 + dense, RRF in Milvus)  ◀────┼──────────────────┘
                 │ cross-variant RRF fusion → candidate pool (12)                │
                 │ BGE-reranker cross-encoder → top 3 chunks                     │
-                │ Groq Qwen3.6-27B: grounded answer + [Page, Lines] citations │
+                │ Groq GPT-OSS-120B: grounded answer + [Page, Lines] citations │
                 └───────────────────────────────────────────────────────────────┘
 ```
 
@@ -117,7 +117,7 @@ The UI renders the cited page with those exact lines highlighted, next to the an
 16-question golden set over the sample corpus — table lookups, cross-section questions, a
 cross-document supersession trap, and questions the corpus cannot answer (must be refused).
 
-**Latest run** (answers: Groq Qwen3.6-27B · judge: llama-3.3-70b · local BGE embeddings):
+**Latest run** (answers: Groq GPT-OSS-120B · judge: Groq GPT-OSS-120B · local BGE embeddings):
 
 | Metric | Score | Notes |
 |---|---:|---|
@@ -125,8 +125,8 @@ cross-document supersession trap, and questions the corpus cannot answer (must b
 | **Answer Relevancy** | **0.825** | over the 15 answerable questions (RAGAS scores refusals 0 by construction) |
 | **Refusal behaviour** | **correct** | the unanswerable question was refused and redirected to related, cited policy |
 
-Judge: llama-3.3-70b, non-thinking — thinking models leak chain-of-thought through langchain
-and corrupt metric parsing. Measurement hygiene worth knowing: citation brackets
+Judge: GPT-OSS-120B with reasoning excluded from the visible answer. Measurement hygiene worth
+knowing: citation brackets
 `[doc, Page N, Lines A-B]` are stripped from answers before faithfulness scoring — otherwise
 the judge decomposes them into pseudo-claims and faithfulness measures formatting, not
 grounding (this single fix moved the score 0.66 → 0.99). Full per-question table:

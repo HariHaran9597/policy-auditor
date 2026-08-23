@@ -11,11 +11,11 @@ PROJECT_ROOT = Path(__file__).resolve().parents[2]
 class Settings(BaseSettings):
     # ---- LLM (Groq) ----
     groq_api_key: str = ""
-    groq_model: str = "llama-3.3-70b-versatile"
-    groq_expansion_model: str = "llama-3.1-8b-instant"
+    groq_model: str = "openai/gpt-oss-120b"
+    groq_expansion_model: str = "openai/gpt-oss-20b"
     # separate non-thinking judge for RAGAS (thinking models leak <think> blocks
     # through langchain, which would corrupt metric parsing)
-    groq_judge_model: str = "llama-3.3-70b-versatile"
+    groq_judge_model: str = "openai/gpt-oss-120b"
 
     # ---- Vector store (Milvus) ----
     # MILVUS_URI: http endpoint of a Milvus server (docker compose up -d).

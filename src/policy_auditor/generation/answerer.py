@@ -66,8 +66,8 @@ class Answerer:
                     model=self.model,
                     temperature=get_settings().answer_temperature,
                     max_tokens=get_settings().answer_max_tokens,
-                    # thinking models: keep chain-of-thought out of the visible answer
-                    extra_body={"reasoning_format": "hidden"},
+                    # GPT-OSS keeps reasoning separate from the visible answer.
+                    include_reasoning=False,
                     messages=[
                         {"role": "system", "content": SYSTEM_PROMPT},
                         {"role": "user", "content": prompt},
