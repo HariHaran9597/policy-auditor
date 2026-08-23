@@ -128,6 +128,28 @@ def _doc_pages(source: str) -> int:
     return n
 
 
+def _index_uploaded_pdfs(uploaded_files) -> list[str]:
+    """Persist uploaded PDFs and add their chunks to the active Milvus index."""
+    from policy_auditor.indexing.milvus_store import MilvusStore
+    from policy_auditor.indexing.pipeline import ingest_pdf
+
+    policies_dir = get_settings().policies_dir
+    policies_dir.mkdir(parents=True, exist_ok=True)
+    store = MilvusStore()
+    store.ensure_collection()
+
+    indexed: list[str] = []
+    for uploaded in uploaded_files:
+        filename = Path(uploaded.name).name
+        if Path(filename).suffix.lower() != ".pdf":
+            raise ValueError(f"Only PDF files are supported: {filename}")
+        destination = policies_dir / filename
+        destination.write_bytes(uploaded.getvalue())
+        report = ingest_pdf(store, destination)
+        indexed.append(f"{report.source} ({report.chunks} chunks)")
+    return indexed
+
+
 # ---------------------------------------------------------------- sidebar
 settings = get_settings()
 demo_index_stats = None
@@ -146,16 +168,34 @@ with st.sidebar:
     try:
         from policy_auditor.indexing.milvus_store import MilvusStore
 
-        stats = demo_index_stats or MilvusStore().stats()
+        store = MilvusStore()
+        stats = store.stats()
         if stats.get("exists"):
             st.metric("Indexed chunks", stats.get("entities", 0))
-            sources = MilvusStore().list_sources()
+            sources = store.list_sources()
             for s in sources:
                 st.markdown(f"- 📄 `{s}`")
         else:
             st.warning("Collection not found. Run `python scripts/ingest.py` first.")
     except Exception as exc:
         st.error(f"Milvus unreachable: {exc}")
+
+    st.divider()
+    st.subheader("Add policy PDFs")
+    uploads = st.file_uploader(
+        "Upload policy documents",
+        type=["pdf"],
+        accept_multiple_files=True,
+        help="PDFs are saved to the policy corpus and indexed for grounded answers.",
+    )
+    if st.button("Index uploaded PDFs", disabled=not uploads, use_container_width=True):
+        try:
+            with st.spinner("Extracting, embedding, and indexing PDFs ..."):
+                indexed = _index_uploaded_pdfs(uploads)
+            st.success("Indexed: " + ", ".join(indexed))
+            st.rerun()
+        except Exception as exc:
+            st.error(f"PDF indexing failed: {exc}")
 
     st.divider()
     if not settings.groq_api_key:

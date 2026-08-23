@@ -93,6 +93,10 @@ streamlit run src/policy_auditor/ui/app.py
 python scripts/evaluate.py
 ```
 
+The Streamlit UI also supports uploading additional PDF policies from the sidebar. Uploaded
+documents are parsed, embedded, and indexed into the active Milvus collection before they can be
+queried.
+
 Bring your own policies: drop any PDFs into `data/policies/` and re-run `python scripts/ingest.py`
 (re-ingestion is idempotent per document).
 
