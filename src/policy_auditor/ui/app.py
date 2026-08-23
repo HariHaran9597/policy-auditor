@@ -8,6 +8,7 @@ Right: the actual source PDF page with the cited lines highlighted in red
 from __future__ import annotations
 
 import io
+import os
 import sys
 from pathlib import Path
 
@@ -20,6 +21,38 @@ if str(SRC_ROOT) not in sys.path:
 from policy_auditor.config import PROJECT_ROOT, get_settings  # noqa: E402
 
 st.set_page_config(page_title="Enterprise Policy Auditor", page_icon="🛡️", layout="wide")
+
+
+def _apply_streamlit_secrets() -> None:
+    """Expose Streamlit Cloud secrets to the existing Pydantic settings layer."""
+    try:
+        for key in ("GROQ_API_KEY", "MILVUS_LOCAL_DB"):
+            if key in st.secrets:
+                os.environ.setdefault(key, str(st.secrets[key]))
+    except FileNotFoundError:
+        # Local development normally uses .env instead of Streamlit secrets.
+        pass
+    get_settings.cache_clear()
+
+
+@st.cache_resource(show_spinner="Preparing the demo policy index (first run only) ...")
+def _bootstrap_embedded_demo_index() -> dict:
+    """Create the embedded Milvus demo index from the repository's sample PDFs."""
+    from policy_auditor.indexing.embedder import get_embedder
+    from policy_auditor.indexing.milvus_store import MilvusStore
+    from policy_auditor.indexing.pipeline import ingest_directory
+
+    # Initialize the embedding runtime before Milvus Lite opens its native library.
+    get_embedder()
+    store = MilvusStore()
+    stats = store.stats()
+    if stats.get("exists") and stats.get("entities", 0) > 0:
+        return stats
+    ingest_directory(store, get_settings().policies_dir)
+    return store.stats()
+
+
+_apply_streamlit_secrets()
 
 SAMPLE_QUESTIONS = [
     "How many days of paternity leave do I get and when must it be used?",
@@ -97,6 +130,13 @@ def _doc_pages(source: str) -> int:
 
 # ---------------------------------------------------------------- sidebar
 settings = get_settings()
+demo_index_stats = None
+if settings.milvus_local_db:
+    try:
+        demo_index_stats = _bootstrap_embedded_demo_index()
+    except Exception as exc:
+        st.error(f"Demo index could not be prepared: {exc}")
+
 with st.sidebar:
     st.title("🛡️ Policy Auditor")
     st.caption("Hybrid retrieval • Cross-encoder reranking • Cited answers")
@@ -106,7 +146,7 @@ with st.sidebar:
     try:
         from policy_auditor.indexing.milvus_store import MilvusStore
 
-        stats = MilvusStore().stats()
+        stats = demo_index_stats or MilvusStore().stats()
         if stats.get("exists"):
             st.metric("Indexed chunks", stats.get("entities", 0))
             sources = MilvusStore().list_sources()
