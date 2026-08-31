@@ -67,13 +67,17 @@ def chunk_parsed_doc(
         pending: list = []  # DocLines of the chunk being built
         pending_table_ids: set[int] = set()
 
-        def flush() -> None:
+        def flush(carry_overlap: bool = True) -> None:
             nonlocal pending
             if pending:
                 chunks.append(_build_chunk(parsed.source, page.page, pending, current_section))
                 # tail overlap (only plain lines, never split tables)
-                tail = [ln for ln in pending if not ln.is_table][-overlap:]
-                pending = list(tail)
+                if carry_overlap:
+                    plain_lines = [ln for ln in pending if not ln.is_table]
+                    tail = plain_lines[-overlap:] if overlap else []
+                    pending = list(tail)
+                else:
+                    pending = []
                 pending_table_ids.clear()
 
         for line in page.lines:
@@ -101,6 +105,47 @@ def chunk_parsed_doc(
             if projected > limit and any(not l.is_table for l in pending):
                 flush()
             if sum(len(l.text) for l in pending) + len(line.text) > target and not line.is_table:
+                flush()
+            pending.append(line)
+
+        # Never carry lines into the next page: page-local chunks are required
+        # for unambiguous citation mapping and evidence highlighting.
+        flush(carry_overlap=False)
+
+    return chunks
+
+
+def fixed_chunk_parsed_doc(
+    parsed: ParsedDoc,
+    chunk_chars: int = 512,
+    overlap_lines: int = 0,
+) -> list[Chunk]:
+    """Build a simple fixed-size baseline for retrieval experiments.
+
+    The baseline still keeps chunks on one page and keeps complete extracted
+    lines, so its results can be compared with the production chunker using
+    the same citation-aware gold spans.  Unlike :func:`chunk_parsed_doc`, it
+    deliberately ignores headings, table boundaries, and semantic sections.
+    """
+    if chunk_chars <= 0:
+        raise ValueError("chunk_chars must be greater than zero")
+    if overlap_lines < 0:
+        raise ValueError("overlap_lines must be zero or greater")
+
+    chunks: list[Chunk] = []
+    for page in parsed.pages:
+        pending: list = []
+
+        def flush() -> None:
+            nonlocal pending
+            if not pending:
+                return
+            chunks.append(_build_chunk(parsed.source, page.page, pending, ""))
+            pending = list(pending[-overlap_lines:]) if overlap_lines else []
+
+        for line in page.lines:
+            projected = len("\n".join(item.text for item in pending))
+            if pending and projected + 1 + len(line.text) > chunk_chars:
                 flush()
             pending.append(line)
 

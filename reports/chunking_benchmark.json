@@ -1,0 +1,701 @@
+{
+  "generated_at": "2026-08-31T17:07:34.736436+00:00",
+  "top_k": 1,
+  "first_stage_k": 8,
+  "n_questions": 16,
+  "n_answerable": 15,
+  "configs": [
+    {
+      "key": "fixed-512",
+      "label": "Fixed 512 chars",
+      "rerank": false,
+      "chunks": 53,
+      "answerable_questions": 15,
+      "full_evidence_hits": 11,
+      "hit_rate": 0.7333,
+      "target_coverage": 0.7647,
+      "elapsed_s": 25.02,
+      "per_question": [
+        {
+          "question": "How many working days of annual leave do employees get, and how many days can be carried over into the next year?",
+          "answerable": true,
+          "covered_targets": 1,
+          "total_targets": 2,
+          "full_evidence_hit": false,
+          "top_chunks": [
+            "Acme_Employee_Handbook_2026.pdf, Page 4, Lines 12-17"
+          ]
+        },
+        {
+          "question": "How long is paternity leave and within how many months of the child's birth must it be used?",
+          "answerable": true,
+          "covered_targets": 1,
+          "total_targets": 1,
+          "full_evidence_hit": true,
+          "top_chunks": [
+            "Acme_Employee_Handbook_2026.pdf, Page 4, Lines 18-22"
+          ]
+        },
+        {
+          "question": "What is the per-night hotel ceiling for a Grade L3 employee travelling within India, and what flight class are they entitled to?",
+          "answerable": true,
+          "covered_targets": 1,
+          "total_targets": 1,
+          "full_evidence_hit": true,
+          "top_chunks": [
+            "Acme_Employee_Handbook_2026.pdf, Page 8, Lines 1-7"
+          ]
+        },
+        {
+          "question": "What is the notice period when a Grade L3 employee resigns?",
+          "answerable": true,
+          "covered_targets": 1,
+          "total_targets": 1,
+          "full_evidence_hit": true,
+          "top_chunks": [
+            "Acme_Employee_Handbook_2026.pdf, Page 11, Lines 1-6"
+          ]
+        },
+        {
+          "question": "Within how many days must the Internal Committee complete a POSH inquiry, and how quickly are complaints acknowledged?",
+          "answerable": true,
+          "covered_targets": 1,
+          "total_targets": 1,
+          "full_evidence_hit": true,
+          "top_chunks": [
+            "Acme_Employee_Handbook_2026.pdf, Page 7, Lines 7-13"
+          ]
+        },
+        {
+          "question": "What is the minimum password length and the password rotation period?",
+          "answerable": true,
+          "covered_targets": 1,
+          "total_targets": 1,
+          "full_evidence_hit": true,
+          "top_chunks": [
+            "Acme_IT_Security_Policy_2026.pdf, Page 2, Lines 1-8"
+          ]
+        },
+        {
+          "question": "After how many failed login attempts is an account locked, and for how long?",
+          "answerable": true,
+          "covered_targets": 1,
+          "total_targets": 1,
+          "full_evidence_hit": true,
+          "top_chunks": [
+            "Acme_IT_Security_Policy_2026.pdf, Page 2, Lines 1-8"
+          ]
+        },
+        {
+          "question": "What are the acknowledgement and resolution targets for a Sev2 security incident?",
+          "answerable": true,
+          "covered_targets": 1,
+          "total_targets": 1,
+          "full_evidence_hit": true,
+          "top_chunks": [
+            "Acme_IT_Security_Policy_2026.pdf, Page 5, Lines 1-6"
+          ]
+        },
+        {
+          "question": "How quickly must a suspected personal-data breach be reported and to whom?",
+          "answerable": true,
+          "covered_targets": 1,
+          "total_targets": 1,
+          "full_evidence_hit": true,
+          "top_chunks": [
+            "Acme_IT_Security_Policy_2026.pdf, Page 5, Lines 7-12"
+          ]
+        },
+        {
+          "question": "How many days per week must an employee living within 50 km of an office work from that office?",
+          "answerable": true,
+          "covered_targets": 1,
+          "total_targets": 1,
+          "full_evidence_hit": true,
+          "top_chunks": [
+            "Acme_Employee_Handbook_2026.pdf, Page 5, Lines 1-6"
+          ]
+        },
+        {
+          "question": "As of March 2026, what is the monthly remote-work internet allowance for a Grade L1 fully-remote employee?",
+          "answerable": true,
+          "covered_targets": 1,
+          "total_targets": 1,
+          "full_evidence_hit": true,
+          "top_chunks": [
+            "Acme_Remote_Work_Addendum_A_2026.pdf, Page 1, Lines 1-7"
+          ]
+        },
+        {
+          "question": "Can Restricted data be accessed from a personal device?",
+          "answerable": true,
+          "covered_targets": 0,
+          "total_targets": 1,
+          "full_evidence_hit": false,
+          "top_chunks": [
+            "Acme_IT_Security_Policy_2026.pdf, Page 4, Lines 7-12"
+          ]
+        },
+        {
+          "question": "How many hours per week of side employment cause the approval to be denied?",
+          "answerable": true,
+          "covered_targets": 1,
+          "total_targets": 1,
+          "full_evidence_hit": true,
+          "top_chunks": [
+            "Acme_Employee_Handbook_2026.pdf, Page 6, Lines 7-11"
+          ]
+        },
+        {
+          "question": "What performance rating is required to be eligible for promotion, and what else must be true?",
+          "answerable": true,
+          "covered_targets": 0,
+          "total_targets": 1,
+          "full_evidence_hit": false,
+          "top_chunks": [
+            "Acme_Employee_Handbook_2026.pdf, Page 9, Lines 1-6"
+          ]
+        },
+        {
+          "question": "Can unused sick leave be carried into the next year?",
+          "answerable": true,
+          "covered_targets": 1,
+          "total_targets": 2,
+          "full_evidence_hit": false,
+          "top_chunks": [
+            "Acme_Employee_Handbook_2026.pdf, Page 4, Lines 12-17"
+          ]
+        },
+        {
+          "question": "What is the tuition reimbursement for an employee's child's college education?",
+          "answerable": false,
+          "covered_targets": 0,
+          "total_targets": 0,
+          "full_evidence_hit": false,
+          "top_chunks": [
+            "Acme_Employee_Handbook_2026.pdf, Page 4, Lines 23-26"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "semantic",
+      "label": "Semantic structure-aware",
+      "rerank": false,
+      "chunks": 32,
+      "answerable_questions": 15,
+      "full_evidence_hits": 12,
+      "hit_rate": 0.8,
+      "target_coverage": 0.8235,
+      "elapsed_s": 5.06,
+      "per_question": [
+        {
+          "question": "How many working days of annual leave do employees get, and how many days can be carried over into the next year?",
+          "answerable": true,
+          "covered_targets": 1,
+          "total_targets": 2,
+          "full_evidence_hit": false,
+          "top_chunks": [
+            "Acme_Employee_Handbook_2026.pdf, Page 4, Lines 1-11"
+          ]
+        },
+        {
+          "question": "How long is paternity leave and within how many months of the child's birth must it be used?",
+          "answerable": true,
+          "covered_targets": 1,
+          "total_targets": 1,
+          "full_evidence_hit": true,
+          "top_chunks": [
+            "Acme_Employee_Handbook_2026.pdf, Page 4, Lines 22-26"
+          ]
+        },
+        {
+          "question": "What is the per-night hotel ceiling for a Grade L3 employee travelling within India, and what flight class are they entitled to?",
+          "answerable": true,
+          "covered_targets": 1,
+          "total_targets": 1,
+          "full_evidence_hit": true,
+          "top_chunks": [
+            "Acme_Employee_Handbook_2026.pdf, Page 8, Lines 1-14"
+          ]
+        },
+        {
+          "question": "What is the notice period when a Grade L3 employee resigns?",
+          "answerable": true,
+          "covered_targets": 1,
+          "total_targets": 1,
+          "full_evidence_hit": true,
+          "top_chunks": [
+            "Acme_Employee_Handbook_2026.pdf, Page 11, Lines 1-10"
+          ]
+        },
+        {
+          "question": "Within how many days must the Internal Committee complete a POSH inquiry, and how quickly are complaints acknowledged?",
+          "answerable": true,
+          "covered_targets": 1,
+          "total_targets": 1,
+          "full_evidence_hit": true,
+          "top_chunks": [
+            "Acme_Employee_Handbook_2026.pdf, Page 7, Lines 1-12"
+          ]
+        },
+        {
+          "question": "What is the minimum password length and the password rotation period?",
+          "answerable": true,
+          "covered_targets": 1,
+          "total_targets": 1,
+          "full_evidence_hit": true,
+          "top_chunks": [
+            "Acme_IT_Security_Policy_2026.pdf, Page 2, Lines 1-13"
+          ]
+        },
+        {
+          "question": "After how many failed login attempts is an account locked, and for how long?",
+          "answerable": true,
+          "covered_targets": 1,
+          "total_targets": 1,
+          "full_evidence_hit": true,
+          "top_chunks": [
+            "Acme_IT_Security_Policy_2026.pdf, Page 2, Lines 1-13"
+          ]
+        },
+        {
+          "question": "What are the acknowledgement and resolution targets for a Sev2 security incident?",
+          "answerable": true,
+          "covered_targets": 1,
+          "total_targets": 1,
+          "full_evidence_hit": true,
+          "top_chunks": [
+            "Acme_IT_Security_Policy_2026.pdf, Page 5, Lines 1-11"
+          ]
+        },
+        {
+          "question": "How quickly must a suspected personal-data breach be reported and to whom?",
+          "answerable": true,
+          "covered_targets": 1,
+          "total_targets": 1,
+          "full_evidence_hit": true,
+          "top_chunks": [
+            "Acme_IT_Security_Policy_2026.pdf, Page 5, Lines 1-11"
+          ]
+        },
+        {
+          "question": "How many days per week must an employee living within 50 km of an office work from that office?",
+          "answerable": true,
+          "covered_targets": 1,
+          "total_targets": 1,
+          "full_evidence_hit": true,
+          "top_chunks": [
+            "Acme_Employee_Handbook_2026.pdf, Page 5, Lines 1-10"
+          ]
+        },
+        {
+          "question": "As of March 2026, what is the monthly remote-work internet allowance for a Grade L1 fully-remote employee?",
+          "answerable": true,
+          "covered_targets": 1,
+          "total_targets": 1,
+          "full_evidence_hit": true,
+          "top_chunks": [
+            "Acme_Remote_Work_Addendum_A_2026.pdf, Page 1, Lines 1-13"
+          ]
+        },
+        {
+          "question": "Can Restricted data be accessed from a personal device?",
+          "answerable": true,
+          "covered_targets": 0,
+          "total_targets": 1,
+          "full_evidence_hit": false,
+          "top_chunks": [
+            "Acme_Employee_Handbook_2026.pdf, Page 13, Lines 1-10"
+          ]
+        },
+        {
+          "question": "How many hours per week of side employment cause the approval to be denied?",
+          "answerable": true,
+          "covered_targets": 1,
+          "total_targets": 1,
+          "full_evidence_hit": true,
+          "top_chunks": [
+            "Acme_Employee_Handbook_2026.pdf, Page 6, Lines 1-8"
+          ]
+        },
+        {
+          "question": "What performance rating is required to be eligible for promotion, and what else must be true?",
+          "answerable": true,
+          "covered_targets": 1,
+          "total_targets": 1,
+          "full_evidence_hit": true,
+          "top_chunks": [
+            "Acme_Employee_Handbook_2026.pdf, Page 9, Lines 1-13"
+          ]
+        },
+        {
+          "question": "Can unused sick leave be carried into the next year?",
+          "answerable": true,
+          "covered_targets": 1,
+          "total_targets": 2,
+          "full_evidence_hit": false,
+          "top_chunks": [
+            "Acme_Employee_Handbook_2026.pdf, Page 4, Lines 12-21"
+          ]
+        },
+        {
+          "question": "What is the tuition reimbursement for an employee's child's college education?",
+          "answerable": false,
+          "covered_targets": 0,
+          "total_targets": 0,
+          "full_evidence_hit": false,
+          "top_chunks": [
+            "Acme_Employee_Handbook_2026.pdf, Page 4, Lines 22-26"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "semantic-overlap",
+      "label": "Semantic + 2-line overlap",
+      "rerank": false,
+      "chunks": 32,
+      "answerable_questions": 15,
+      "full_evidence_hits": 14,
+      "hit_rate": 0.9333,
+      "target_coverage": 0.9412,
+      "elapsed_s": 5.16,
+      "per_question": [
+        {
+          "question": "How many working days of annual leave do employees get, and how many days can be carried over into the next year?",
+          "answerable": true,
+          "covered_targets": 2,
+          "total_targets": 2,
+          "full_evidence_hit": true,
+          "top_chunks": [
+            "Acme_Employee_Handbook_2026.pdf, Page 4, Lines 3-19"
+          ]
+        },
+        {
+          "question": "How long is paternity leave and within how many months of the child's birth must it be used?",
+          "answerable": true,
+          "covered_targets": 1,
+          "total_targets": 1,
+          "full_evidence_hit": true,
+          "top_chunks": [
+            "Acme_Employee_Handbook_2026.pdf, Page 4, Lines 18-26"
+          ]
+        },
+        {
+          "question": "What is the per-night hotel ceiling for a Grade L3 employee travelling within India, and what flight class are they entitled to?",
+          "answerable": true,
+          "covered_targets": 1,
+          "total_targets": 1,
+          "full_evidence_hit": true,
+          "top_chunks": [
+            "Acme_Employee_Handbook_2026.pdf, Page 8, Lines 1-14"
+          ]
+        },
+        {
+          "question": "What is the notice period when a Grade L3 employee resigns?",
+          "answerable": true,
+          "covered_targets": 1,
+          "total_targets": 1,
+          "full_evidence_hit": true,
+          "top_chunks": [
+            "Acme_Employee_Handbook_2026.pdf, Page 11, Lines 1-10"
+          ]
+        },
+        {
+          "question": "Within how many days must the Internal Committee complete a POSH inquiry, and how quickly are complaints acknowledged?",
+          "answerable": true,
+          "covered_targets": 1,
+          "total_targets": 1,
+          "full_evidence_hit": true,
+          "top_chunks": [
+            "Acme_Employee_Handbook_2026.pdf, Page 7, Lines 6-18"
+          ]
+        },
+        {
+          "question": "What is the minimum password length and the password rotation period?",
+          "answerable": true,
+          "covered_targets": 1,
+          "total_targets": 1,
+          "full_evidence_hit": true,
+          "top_chunks": [
+            "Acme_IT_Security_Policy_2026.pdf, Page 2, Lines 1-13"
+          ]
+        },
+        {
+          "question": "After how many failed login attempts is an account locked, and for how long?",
+          "answerable": true,
+          "covered_targets": 1,
+          "total_targets": 1,
+          "full_evidence_hit": true,
+          "top_chunks": [
+            "Acme_IT_Security_Policy_2026.pdf, Page 2, Lines 1-13"
+          ]
+        },
+        {
+          "question": "What are the acknowledgement and resolution targets for a Sev2 security incident?",
+          "answerable": true,
+          "covered_targets": 1,
+          "total_targets": 1,
+          "full_evidence_hit": true,
+          "top_chunks": [
+            "Acme_IT_Security_Policy_2026.pdf, Page 5, Lines 1-11"
+          ]
+        },
+        {
+          "question": "How quickly must a suspected personal-data breach be reported and to whom?",
+          "answerable": true,
+          "covered_targets": 1,
+          "total_targets": 1,
+          "full_evidence_hit": true,
+          "top_chunks": [
+            "Acme_IT_Security_Policy_2026.pdf, Page 5, Lines 1-11"
+          ]
+        },
+        {
+          "question": "How many days per week must an employee living within 50 km of an office work from that office?",
+          "answerable": true,
+          "covered_targets": 1,
+          "total_targets": 1,
+          "full_evidence_hit": true,
+          "top_chunks": [
+            "Acme_Employee_Handbook_2026.pdf, Page 5, Lines 1-10"
+          ]
+        },
+        {
+          "question": "As of March 2026, what is the monthly remote-work internet allowance for a Grade L1 fully-remote employee?",
+          "answerable": true,
+          "covered_targets": 1,
+          "total_targets": 1,
+          "full_evidence_hit": true,
+          "top_chunks": [
+            "Acme_Remote_Work_Addendum_A_2026.pdf, Page 1, Lines 1-13"
+          ]
+        },
+        {
+          "question": "Can Restricted data be accessed from a personal device?",
+          "answerable": true,
+          "covered_targets": 0,
+          "total_targets": 1,
+          "full_evidence_hit": false,
+          "top_chunks": [
+            "Acme_Employee_Handbook_2026.pdf, Page 13, Lines 1-10"
+          ]
+        },
+        {
+          "question": "How many hours per week of side employment cause the approval to be denied?",
+          "answerable": true,
+          "covered_targets": 1,
+          "total_targets": 1,
+          "full_evidence_hit": true,
+          "top_chunks": [
+            "Acme_Employee_Handbook_2026.pdf, Page 6, Lines 7-15"
+          ]
+        },
+        {
+          "question": "What performance rating is required to be eligible for promotion, and what else must be true?",
+          "answerable": true,
+          "covered_targets": 1,
+          "total_targets": 1,
+          "full_evidence_hit": true,
+          "top_chunks": [
+            "Acme_Employee_Handbook_2026.pdf, Page 9, Lines 1-13"
+          ]
+        },
+        {
+          "question": "Can unused sick leave be carried into the next year?",
+          "answerable": true,
+          "covered_targets": 2,
+          "total_targets": 2,
+          "full_evidence_hit": true,
+          "top_chunks": [
+            "Acme_Employee_Handbook_2026.pdf, Page 4, Lines 3-19"
+          ]
+        },
+        {
+          "question": "What is the tuition reimbursement for an employee's child's college education?",
+          "answerable": false,
+          "covered_targets": 0,
+          "total_targets": 0,
+          "full_evidence_hit": false,
+          "top_chunks": [
+            "Acme_Employee_Handbook_2026.pdf, Page 4, Lines 18-26"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "semantic-overlap-reranker",
+      "label": "Semantic + overlap + BGE reranker",
+      "rerank": true,
+      "chunks": 32,
+      "answerable_questions": 15,
+      "full_evidence_hits": 14,
+      "hit_rate": 0.9333,
+      "target_coverage": 0.9412,
+      "elapsed_s": 57.38,
+      "per_question": [
+        {
+          "question": "How many working days of annual leave do employees get, and how many days can be carried over into the next year?",
+          "answerable": true,
+          "covered_targets": 2,
+          "total_targets": 2,
+          "full_evidence_hit": true,
+          "top_chunks": [
+            "Acme_Employee_Handbook_2026.pdf, Page 4, Lines 3-19"
+          ]
+        },
+        {
+          "question": "How long is paternity leave and within how many months of the child's birth must it be used?",
+          "answerable": true,
+          "covered_targets": 1,
+          "total_targets": 1,
+          "full_evidence_hit": true,
+          "top_chunks": [
+            "Acme_Employee_Handbook_2026.pdf, Page 4, Lines 18-26"
+          ]
+        },
+        {
+          "question": "What is the per-night hotel ceiling for a Grade L3 employee travelling within India, and what flight class are they entitled to?",
+          "answerable": true,
+          "covered_targets": 1,
+          "total_targets": 1,
+          "full_evidence_hit": true,
+          "top_chunks": [
+            "Acme_Employee_Handbook_2026.pdf, Page 8, Lines 1-14"
+          ]
+        },
+        {
+          "question": "What is the notice period when a Grade L3 employee resigns?",
+          "answerable": true,
+          "covered_targets": 1,
+          "total_targets": 1,
+          "full_evidence_hit": true,
+          "top_chunks": [
+            "Acme_Employee_Handbook_2026.pdf, Page 11, Lines 1-10"
+          ]
+        },
+        {
+          "question": "Within how many days must the Internal Committee complete a POSH inquiry, and how quickly are complaints acknowledged?",
+          "answerable": true,
+          "covered_targets": 1,
+          "total_targets": 1,
+          "full_evidence_hit": true,
+          "top_chunks": [
+            "Acme_Employee_Handbook_2026.pdf, Page 7, Lines 1-12"
+          ]
+        },
+        {
+          "question": "What is the minimum password length and the password rotation period?",
+          "answerable": true,
+          "covered_targets": 1,
+          "total_targets": 1,
+          "full_evidence_hit": true,
+          "top_chunks": [
+            "Acme_IT_Security_Policy_2026.pdf, Page 2, Lines 1-13"
+          ]
+        },
+        {
+          "question": "After how many failed login attempts is an account locked, and for how long?",
+          "answerable": true,
+          "covered_targets": 1,
+          "total_targets": 1,
+          "full_evidence_hit": true,
+          "top_chunks": [
+            "Acme_IT_Security_Policy_2026.pdf, Page 2, Lines 1-13"
+          ]
+        },
+        {
+          "question": "What are the acknowledgement and resolution targets for a Sev2 security incident?",
+          "answerable": true,
+          "covered_targets": 1,
+          "total_targets": 1,
+          "full_evidence_hit": true,
+          "top_chunks": [
+            "Acme_IT_Security_Policy_2026.pdf, Page 5, Lines 1-11"
+          ]
+        },
+        {
+          "question": "How quickly must a suspected personal-data breach be reported and to whom?",
+          "answerable": true,
+          "covered_targets": 1,
+          "total_targets": 1,
+          "full_evidence_hit": true,
+          "top_chunks": [
+            "Acme_IT_Security_Policy_2026.pdf, Page 5, Lines 1-11"
+          ]
+        },
+        {
+          "question": "How many days per week must an employee living within 50 km of an office work from that office?",
+          "answerable": true,
+          "covered_targets": 1,
+          "total_targets": 1,
+          "full_evidence_hit": true,
+          "top_chunks": [
+            "Acme_Employee_Handbook_2026.pdf, Page 5, Lines 1-10"
+          ]
+        },
+        {
+          "question": "As of March 2026, what is the monthly remote-work internet allowance for a Grade L1 fully-remote employee?",
+          "answerable": true,
+          "covered_targets": 1,
+          "total_targets": 1,
+          "full_evidence_hit": true,
+          "top_chunks": [
+            "Acme_Remote_Work_Addendum_A_2026.pdf, Page 1, Lines 1-13"
+          ]
+        },
+        {
+          "question": "Can Restricted data be accessed from a personal device?",
+          "answerable": true,
+          "covered_targets": 0,
+          "total_targets": 1,
+          "full_evidence_hit": false,
+          "top_chunks": [
+            "Acme_Employee_Handbook_2026.pdf, Page 13, Lines 1-10"
+          ]
+        },
+        {
+          "question": "How many hours per week of side employment cause the approval to be denied?",
+          "answerable": true,
+          "covered_targets": 1,
+          "total_targets": 1,
+          "full_evidence_hit": true,
+          "top_chunks": [
+            "Acme_Employee_Handbook_2026.pdf, Page 6, Lines 7-15"
+          ]
+        },
+        {
+          "question": "What performance rating is required to be eligible for promotion, and what else must be true?",
+          "answerable": true,
+          "covered_targets": 1,
+          "total_targets": 1,
+          "full_evidence_hit": true,
+          "top_chunks": [
+            "Acme_Employee_Handbook_2026.pdf, Page 9, Lines 1-13"
+          ]
+        },
+        {
+          "question": "Can unused sick leave be carried into the next year?",
+          "answerable": true,
+          "covered_targets": 2,
+          "total_targets": 2,
+          "full_evidence_hit": true,
+          "top_chunks": [
+            "Acme_Employee_Handbook_2026.pdf, Page 4, Lines 3-19"
+          ]
+        },
+        {
+          "question": "What is the tuition reimbursement for an employee's child's college education?",
+          "answerable": false,
+          "covered_targets": 0,
+          "total_targets": 0,
+          "full_evidence_hit": false,
+          "top_chunks": [
+            "Acme_Employee_Handbook_2026.pdf, Page 10, Lines 1-12"
+          ]
+        }
+      ]
+    }
+  ]
+}

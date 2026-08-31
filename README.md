@@ -99,6 +99,9 @@ streamlit run src/policy_auditor/ui/app.py
 
 # 8. Evaluation (RAGAS faithfulness + answer relevancy over 16 golden questions)
 python scripts/evaluate.py
+
+# 9. Retrieval A/B benchmark (chunking + reranker hit-rate over the same set)
+python scripts/bench_chunking.py
 ```
 
 The Streamlit UI also supports uploading additional PDF policies from the sidebar. Uploaded
@@ -144,6 +147,31 @@ the judge decomposes them into pseudo-claims and faithfulness measures formattin
 grounding (this single fix moved the score 0.66 → 0.99). Full per-question table:
 `reports/ragas_report.md`. Run `python scripts/evaluate.py` to reproduce.
 
+## Retrieval hit-rate benchmark
+
+RAGAS evaluates generated answers; this separate benchmark evaluates whether retrieval found
+the evidence needed to answer each question. It runs the same 16-question golden set through
+four isolated Milvus collections, with query expansion and answer generation disabled so the
+comparison stays focused on chunking and reranking. A question counts as a hit only when every
+annotated evidence span is covered by the top-1 retrieved chunk (use `--top-k 3` for the
+production answerer's top-3 view). The 15 answerable
+questions are the denominator; the designed tuition-reimbursement refusal is excluded.
+
+**Latest benchmark run:**
+
+| Configuration | Chunks | Reranker | Full-evidence hits@1 | Hit rate@1 | Δ vs previous | Target coverage |
+|---|---:|:---:|---:|---:|---:|---:|
+| Fixed 512 chars | 53 | no | 11/15 | 73.3% | — | 76.5% |
+| Semantic structure-aware | 32 | no | 12/15 | 80.0% | +6.7 pp | 82.3% |
+| Semantic + 2-line overlap | 32 | no | 14/15 | 93.3% | +13.3 pp | 94.1% |
+| Semantic + overlap + BGE reranker | 32 | yes | 14/15 | 93.3% | +0.0 pp | 94.1% |
+
+Run `python scripts/bench_chunking.py` to regenerate the table. It writes the machine-readable
+results to `reports/chunking_benchmark.json` and the full per-question matrix to
+`reports/chunking_benchmark.md`. The benchmark uses citation page/line spans declared beside
+each question in `evaluation/dataset.py`, making the hit definition auditable instead of relying
+on a lexical similarity threshold.
+
 ## Project layout
 
 ```
@@ -154,7 +182,7 @@ src/policy_auditor/
 ├── generation/    prompts.py, answerer.py (grounded + citation parsing)
 ├── evaluation/    dataset.py (golden set), ragas_eval.py
 └── ui/            app.py (Streamlit split view + highlighted source pages)
-scripts/           make_sample_data.py · ingest.py · ask.py · evaluate.py
+scripts/           make_sample_data.py · ingest.py · ask.py · evaluate.py · bench_chunking.py
 tests/             parser / chunker / fusion / citation unit tests (pytest)
 ```
 
