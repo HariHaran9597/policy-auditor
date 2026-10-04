@@ -28,7 +28,7 @@ Ask a generic chatbot *"what's the hotel ceiling for a Grade L3 employee?"* and 
 invent a number. In HR/compliance the answer must come **from the document**, with a citation a
 human can verify in seconds. This project is a small but complete answer to that requirement:
 
-- **Zero-hallucination posture** — the answering model sees only reranked policy chunks and is
+- **Grounded-answer design** — the answering model sees only reranked policy chunks and is
   required to cite every claim as `[document, Page N, Lines A-B]`; questions the corpus can't
   answer are refused explicitly instead of guessed.
 - **Table-aware ingestion** — policy PDFs live in tables (leave quotas, travel ceilings, incident
@@ -39,6 +39,11 @@ human can verify in seconds. This project is a small but complete answer to that
   pool and keeps only the top 3 chunks.
 - **Measured, not claimed** — a 16-question golden set (table lookups, cross-document
   supersession, and unanswerable traps) scored with RAGAS faithfulness + answer relevancy.
+
+**Status:** public portfolio demo with three synthetic Acme policy documents. The reported
+faithfulness score of 0.986 covers 14 judged questions out of 16; two judge calls timed out.
+This small evaluation does not guarantee hallucination-free answers or demonstrate customer
+adoption. Review the cited source before relying on an answer.
 
 ## Architecture
 
