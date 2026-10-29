@@ -5,7 +5,7 @@ build-backend = "setuptools.build_meta"
 [project]
 name = "policy-auditor"
 version = "1.0.0"
-description = "Enterprise Policy Auditor — high-precision RAG over HR/compliance PDFs (hybrid BM25+dense retrieval, cross-encoder reranking, cited generation, RAGAS-evaluated)"
+description = "Policy Auditor demo — hybrid retrieval over fictional policy PDFs with evidence citations and RAG evaluation"
 requires-python = ">=3.10"
 
 [tool.setuptools.packages.find]

@@ -10,7 +10,6 @@ from __future__ import annotations
 import io
 import os
 import sys
-from pathlib import Path
 
 import streamlit as st
 
@@ -20,7 +19,7 @@ if str(SRC_ROOT) not in sys.path:
 
 from policy_auditor.config import PROJECT_ROOT, get_settings  # noqa: E402
 
-st.set_page_config(page_title="Enterprise Policy Auditor", page_icon="🛡️", layout="wide")
+st.set_page_config(page_title="Policy Auditor", page_icon="🛡️", layout="wide")
 
 
 def _apply_streamlit_secrets() -> None:
@@ -128,28 +127,6 @@ def _doc_pages(source: str) -> int:
     return n
 
 
-def _index_uploaded_pdfs(uploaded_files) -> list[str]:
-    """Persist uploaded PDFs and add their chunks to the active Milvus index."""
-    from policy_auditor.indexing.milvus_store import MilvusStore
-    from policy_auditor.indexing.pipeline import ingest_pdf
-
-    policies_dir = get_settings().policies_dir
-    policies_dir.mkdir(parents=True, exist_ok=True)
-    store = MilvusStore()
-    store.ensure_collection()
-
-    indexed: list[str] = []
-    for uploaded in uploaded_files:
-        filename = Path(uploaded.name).name
-        if Path(filename).suffix.lower() != ".pdf":
-            raise ValueError(f"Only PDF files are supported: {filename}")
-        destination = policies_dir / filename
-        destination.write_bytes(uploaded.getvalue())
-        report = ingest_pdf(store, destination)
-        indexed.append(f"{report.source} ({report.chunks} chunks)")
-    return indexed
-
-
 # ---------------------------------------------------------------- sidebar
 settings = get_settings()
 demo_index_stats = None
@@ -181,21 +158,10 @@ with st.sidebar:
         st.error(f"Milvus unreachable: {exc}")
 
     st.divider()
-    st.subheader("Add policy PDFs")
-    uploads = st.file_uploader(
-        "Upload policy documents",
-        type=["pdf"],
-        accept_multiple_files=True,
-        help="PDFs are saved to the policy corpus and indexed for grounded answers.",
+    st.caption(
+        "Demo corpus: fictional sample policies only. Uploads are disabled so one visitor's "
+        "documents cannot enter another visitor's search results."
     )
-    if st.button("Index uploaded PDFs", disabled=not uploads, use_container_width=True):
-        try:
-            with st.spinner("Extracting, embedding, and indexing PDFs ..."):
-                indexed = _index_uploaded_pdfs(uploads)
-            st.success("Indexed: " + ", ".join(indexed))
-            st.rerun()
-        except Exception as exc:
-            st.error(f"PDF indexing failed: {exc}")
 
     st.divider()
     if not settings.groq_api_key:
@@ -211,7 +177,10 @@ with st.sidebar:
 
 # ---------------------------------------------------------------- main
 st.header("Ask the policy corpus")
-st.caption("Answers cite every claim as [document, Page N, Lines A-B] — open the evidence on the right.")
+st.caption(
+    "Answers include source citations checked against retrieved evidence. "
+    "This demo uses fictional sample policies; do not treat it as legal or HR advice."
+)
 
 question = st.text_input(
     "Question",
@@ -277,12 +246,14 @@ if result is not None:
 
         if result.citations:
             st.markdown("**Cited evidence** (click to view the source page →)")
-            cited_chunks = result.cited_chunks or result.chunks[:1]
+            cited_chunks = result.cited_chunks
             for i, c in enumerate(cited_chunks):
                 if st.button(f"📍 {c.citation}", key=f"cit{i}"):
                     st.session_state["focus"] = f"{c.source}|{c.page}|{c.line_start}|{c.line_end}"
                     st.session_state["view_doc"] = c.source
                     st.session_state["view_page"] = c.page
+        elif result.chunks:
+            st.warning("No source citation could be verified for this answer. Review retrieved passages below.")
 
         ev = st.expander("Retrieval detail (top chunks after reranking)")
         with ev:
@@ -328,9 +299,10 @@ if result is not None:
         try:
             png = render_page(view_doc, int(view_page), focus_key, other_keys)
             st.image(io.BytesIO(png), use_container_width=True)
-            st.caption(
-                "🔴 highlighted = cited lines &nbsp;·&nbsp; 🔵 outline = other top-ranked chunks"
-            )
+            if result.citations:
+                st.caption("🔴 highlighted = cited lines &nbsp;·&nbsp; 🔵 outline = other top-ranked chunks")
+            else:
+                st.caption("No citation was verified; 🔵 outlines show retrieved passages for manual review.")
         except FileNotFoundError:
             st.error(f"PDF {view_doc} not found under data/policies — drop it there to enable the viewer.")
 

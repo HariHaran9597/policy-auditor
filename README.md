@@ -1,6 +1,6 @@
 <p align="center">
-  <h1 align="center">🛡️ Enterprise Policy Auditor</h1>
-  <p align="center"><b>High-precision RAG over HR / compliance PDFs — every claim cited to the exact page and line, evaluated with RAGAS.</b></p>
+  <h1 align="center">🛡️ Policy Auditor</h1>
+  <p align="center"><b>Evidence-first policy Q&A over fictional sample documents, with citations checked against retrieved passages.</b></p>
 </p>
 
 <p align="center">
@@ -26,11 +26,11 @@
 
 Ask a generic chatbot *"what's the hotel ceiling for a Grade L3 employee?"* and it will happily
 invent a number. In HR/compliance the answer must come **from the document**, with a citation a
-human can verify in seconds. This project is a small but complete answer to that requirement:
+human can verify in seconds. This project is a focused portfolio demo of that workflow:
 
 - **Grounded-answer design** — the answering model sees only reranked policy chunks and is
-  required to cite every claim as `[document, Page N, Lines A-B]`; questions the corpus can't
-  answer are refused explicitly instead of guessed.
+  prompted to cite its claims as `[document, Page N, Lines A-B]`. Generated citations are
+  checked against the retrieved chunks; questions the corpus can't answer are refused.
 - **Table-aware ingestion** — policy PDFs live in tables (leave quotas, travel ceilings, incident
   SLAs). PyMuPDF extracts tables as structure, and each table row gets its own line number, so a
   citation can point at the exact row.
@@ -109,9 +109,10 @@ python scripts/evaluate.py
 python scripts/bench_chunking.py
 ```
 
-The Streamlit UI also supports uploading additional PDF policies from the sidebar. Uploaded
-documents are parsed, embedded, and indexed into the active Milvus collection before they can be
-queried.
+The public Streamlit demo uses only the fictional sample policies included in this repository.
+Uploads are disabled in the public UI because it does not provide per-user corpus isolation.
+For local experiments, add PDFs to `data/policies/` and run the ingestion script yourself; do
+not use confidential documents with the hosted demo.
 
 Bring your own policies: drop any PDFs into `data/policies/` and re-run `python scripts/ingest.py`
 (re-ingestion is idempotent per document).

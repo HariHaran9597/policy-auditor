@@ -13,6 +13,7 @@ CITATION_RE = re.compile(
 )
 
 INSUFFICIENT = "The provided policy documents do not contain sufficient information"
+UNVERIFIED = "I could not verify the response against the retrieved policy evidence. Please rephrase the question or review the sample policies."
 
 _THINK_BLOCK = re.compile(r"<think>.*?</think>", re.DOTALL)
 
@@ -41,6 +42,9 @@ class Answerer:
         return self._client
 
     def answer(self, question: str, chunks: list[RetrievedChunk]) -> str:
+        if not chunks:
+            return f"{INSUFFICIENT} to answer this question."
+
         contexts = []
         for i, c in enumerate(chunks, start=1):
             header = (
@@ -49,7 +53,13 @@ class Answerer:
             )
             contexts.append(f"{header}\n{c.text}")
 
-        return _strip_reasoning(self._generate_with_retry(question, contexts))
+        answer = _strip_reasoning(self._generate_with_retry(question, contexts))
+        citations = extract_citations(answer)
+        if answer.startswith(INSUFFICIENT) and not citations:
+            return answer
+        if not citations or not citations_resolve(citations, chunks):
+            return UNVERIFIED
+        return answer
 
     def _generate_with_retry(self, question: str, contexts: list[str]) -> str:
         """Groq free tier enforces tight TPM limits; thinking models burn tokens
@@ -97,3 +107,22 @@ def extract_citations(answer: str) -> list[dict]:
             }
         )
     return found
+
+
+def citations_resolve(citations: list[dict], chunks: list[RetrievedChunk]) -> bool:
+    """Require every generated citation to point inside a retrieved chunk."""
+    if not citations:
+        return False
+
+    for citation in citations:
+        if citation["line_start"] > citation["line_end"]:
+            return False
+        if not any(
+            chunk.source == citation["source"]
+            and chunk.page == citation["page"]
+            and chunk.line_start <= citation["line_start"]
+            and citation["line_end"] <= chunk.line_end
+            for chunk in chunks
+        ):
+            return False
+    return True
